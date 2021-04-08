@@ -1,9 +1,13 @@
+"""Module responsible of defining the models for the application."""
+
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Text, Table, ForeignKey
 from sqlalchemy.orm import relationship
 
 Base = declarative_base()
 
+# Association table used to link articles and tags in their many to many
+# relationship
 article_tag = Table(
     'article_tag',
     Base.metadata,
@@ -31,6 +35,8 @@ class Article(Base):
 
 
 class Tag(Base):
+    """Represents a tag to categorize articles."""
+
     __tablename__ = 'tag'
 
     id = Column(Integer, primary_key=True)
