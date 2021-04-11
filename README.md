@@ -41,13 +41,13 @@ Selon la base de données que vous aurez décidé d'installer, il vous faudra é
 ### Utilisation du programme d'exemple
 
 Pour exécuter ce programme d'exemple, il faut dans un premier temps initialiser
-la base de données à l'aide de la commande `$ pipenv run python microblog initdb`.
+la base de données à l'aide de la commande `$ pipenv run python -m microblog initdb`.
 
 Une fois que la base est initialisée, vous pouvez afficher les articles à l'aide
-de la commande `$ pipenv run python microblog show`.
+de la commande `$ pipenv run python -m microblog show`.
 
 Pour filter l'affichage des articles en fonction des tags qu'ils contiennent, vous
-pouvez exécuter cette commande avec une liste de tags: `$ pipenv run python microblog show tag1 tag2 ...`
+pouvez exécuter cette commande avec une liste de tags: `$ pipenv run python microblog -m show tag1 tag2 ...`
 
 Pour créer une nouvel article ou pour taguer un article existant, utilisez la 
-commande `pipenv run python microblog article "titre de mon article" tag1 tag2 ...`
+commande `pipenv run python -m microblog article "titre de mon article" tag1 tag2 ...`
